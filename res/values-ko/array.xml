@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="acc_senser">
+        <item>"민감"</item>
+        <item>"기본 - default"</item>
+        <item>"둔함"</item>
+        <item>"끄기"</item>
+    </string-array>
+    <string-array name="acc_senser_prefix">
+        <item>"0.5"</item>
+        <item>"1.0"</item>
+        <item>"1.5"</item>
+        <item>"0.0"</item>
+    </string-array>
+    <string-array name="light_senser">
+        <item>"끄기"</item>
+        <item>"근접센서" </item>
+        <item>"FULLMOON(0.25)"</item>
+        <item>"CLOUDY(100) - default"</item>
+        <item>"SUNRISE(400)"</item>
+        <item>"OVERCAST(1000)"</item>
+    </string-array>
+    <string-array name="light_senser_prefix">
+        <item>"OFF"</item>
+        <item>"PROXIMITY"</item>
+        <item>"LIGHT_FULLMOON"</item>
+        <item>"LIGHT_CLOUDY"</item>
+        <item>"LIGHT_SUNRISE"</item>
+        <item>"LIGHT_OVERCAST"</item>
+    </string-array>
+    <string-array name="snow_color_prefix">
+        <item>"LT_GRAY"</item>
+        <item>"WHITE"</item>
+    </string-array>
+    <string-array name="snow_color_entry">
+        <item>"Light Gray"</item>
+        <item>"White"</item>
+    </string-array>
+    <string-array name="back_bit_prefix">
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        
+    </string-array>
+    <string-array name="back_bit_entry">
+        <item>"사용자 선택"</item>
+        <item>"배경 1"</item>
+        
+        <item>"배경 2"</item>
+        <item>"배경 3"</item>
+        <item>"배경 4"</item>
+    </string-array>
+	<string-array name="wide_entry">
+	    <item>"1"</item>
+	    <item>"2"</item>
+	</string-array>
+	    <string-array name="wide_prefix">
+        <item>"1"</item>
+        <item>"2"</item>
+    </string-array>
+	
+</resources>

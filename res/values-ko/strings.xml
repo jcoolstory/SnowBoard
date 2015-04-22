@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="lock_setting_title">바닥 잠금</string>
+    <string name="lock_setting_summary">쌓이는 바닥 그림을 잠그기</string>
+    <string name="app_name">스노보드 무료</string>
+    <string name="app_name_setting">스노보드 무료 설정</string>
+    <string name="wallpaper_description"> 눈내리는 칠판 스노보드</string>
+    <string name="sound_setting_title">소리</string>
+    <string name="vib_setting_title">진동</string>
+    <string name="acc_setting">가속센서 반응력</string>
+    <string name="light_setting">빛센서 반응력</string>
+    <string name="back_ground_onoff">배경화면</string>
+    <string name="acc_summary">가속 센서 감도를 설정 하기</string>
+    <string name="light_summary"> 조도/근접 센서를 설정 하기</string>
+    <string name="action_summary"></string>
+    <string name="vib_setting_summary"></string>
+    <string name="sound_setting_summary"></string>
+    <string name="snow_color_title">눈 색상</string>
+    <string name="snow_color_summary">바닥에 쌓이는 눈색상</string>
+    <string name="back_bit_title">배경 그림 설정</string>
+    <string name="back_bit_summary"></string>
+    <string name="snow_flake_color_title">눈송이 색상</string>
+    <string name="snow_ground_color_title">눈 바닥 색상</string>
+    <string name="frame_setting_title">프레임</string>
+    <string name="flake_size_title">눈송이 크기</string>
+    <string name="color_h">색상</string>
+    <string name="color_s">채도</string>
+    <string name="color_v">명도</string>
+    <string name="color_select">색상 선택</string>
+	<string name="flake_touchable_title">눈송이 터치가능</string>
+	<string name="ok">확인</string>
+	<string name="new_image">새로운 이미지</string>
+	<string name="cancel">취소</string>
+	<string name="finger_thickness_setting">터치 두께</string>
+	<string name="paint_mode_setting">페인트로 그리기 모드</string>
+	<string name="batter_save_mode_setting">절전모드</string>
+	<string name="swip_lock_setting">스크롤 잠금</string>
+	<string name="debug_mode_setting">Debug text draw</string>
+	<string name="include_image_setting">새로운 이미지 불러오기</string>
+	<string name="gotomarket">유료 버전 구매</string>
+</resources>

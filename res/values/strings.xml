@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Snow Board Free</string>
+    <string name="app_name_setting">Snow Board Free Setting</string>
+    <string name="wallpaper_description">Snowy Blackboard, Snowboard</string>
+   <string name="lock_setting_title">Canvas lock  </string>
+    <string name="lock_setting_summary"></string>
+    <string name="sound_setting_title">Sound</string>
+    <string name="vib_setting_title">Vibration</string>
+    <string name="acc_setting">Acceleration sensor</string>
+    <string name="light_setting">Light/Proximity Sensor</string>
+    <string name="back_ground_onoff">Background</string>
+    <string name="acc_summary"></string>
+    <string name="light_summary"></string>
+    <string name="action_summary"></string>
+    <string name="vib_setting_summary"></string>
+    <string name="sound_setting_summary"></string>
+    <string name="snow_color_title">Bottom Snow color</string>
+    <string name="snow_color_summary"></string>
+    <string name="back_bit_title">Background picture</string>
+    <string name="back_bit_summary"></string>
+    <string name="freemessage">Free version does not support</string>
+    <string name="snow_flake_color_title">Snowflake Color</string>
+    <string name="snow_ground_color_title">Snow ground Color</string>
+    <string name="frame_setting_title">Frame rate</string>
+    <string name="flake_size_title">Snowflake size</string>
+    <string name="color_h">hue</string>
+    <string name="color_s">saturation</string>
+    <string name="color_v">value</string>
+    <string name="color_select">Color Select</string>
+    <string name="flake_touchable_title">Snowflake Touchable</string>
+	<string name="ok">OK</string>
+	<string name="new_image">New Image</string>
+	<string name="cancel">Cancel</string>
+	<string name="finger_thickness_setting">Finger thickness</string>
+	<string name="paint_mode_setting">Drawing with color</string>
+	<string name="batter_save_mode_setting">Battery save mode</string>
+	<string name="swip_lock_setting">Scroll lock</string>
+	<string name="debug_mode_setting">Debug text draw</string>
+	<string name="include_image_setting">New image from gallery</string>
+	<string name="wind_cycle_setting">Period</string>
+	<string name="wind_change_setting">Change</string>
+	<string name="wind_max_setting">Max</string>
+	<string name="savepicture">Canvas capture</string>
+	<string name="sendmail">Send feedback</string>
+	<string name="wind_screen">Wind</string>
+	<string name="gotomarket">Get the Full Version</string>
+</resources>

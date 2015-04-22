@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference android:key="banner" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="lock_setting"
+        android:title="@string/lock_setting_title" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="background_setting"
+        android:title="@string/back_ground_onoff" />
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/back_bit_entry"
+        android:entryValues="@array/back_bit_prefix"
+        android:key="back_bit_setting"
+        android:summary="@string/back_bit_summary"
+        android:title="@string/back_bit_title" />
+
+    <Preference
+        android:key="flake_size_setting"
+        android:title="@string/flake_size_title" />
+    <Preference
+        android:key="frame_setting"
+        android:title="@string/frame_setting_title" />
+
+    <!--
+    		<Preference  android:key="savepicture"
+          android:title="savepicture"
+         android:enabled="false" android:selectable="false"/>
+    		
+    		   
+    		    
+    		    
+    		    
+    		    
+    		    
+    		    
+    		    /////////////////////////
+        <Preference android:layout="@layout/banner" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="lock_setting"
+        android:title="@string/lock_setting_title" />
+  <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="background_setting"
+        android:title="@string/back_ground_onoff" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/back_bit_entry"
+        android:entryValues="@array/back_bit_prefix"
+        android:key="back_bit_setting"
+        android:summary="@string/back_bit_summary"
+        android:title="@string/back_bit_title" />
+      <Preference  android:key="include_image_setting"
+          android:title="@string/include_image_setting"
+          />
+    <Preference
+        android:key="snowflakecolor"
+        android:title="@string/snow_flake_color_title"
+        android:widgetLayout="@layout/snowflakecolor_setting" />
+    <Preference
+        android:enabled="true"
+        android:key="snowgroundcolor"
+        android:title="@string/snow_ground_color_title"
+        android:widgetLayout="@layout/snowgroundcolor_setting" />
+    <Preference
+        android:key="flake_size_setting"
+        android:title="@string/flake_size_title" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="flake_touchable_setting"
+        android:title="@string/flake_touchable_title" />
+
+    <Preference
+        android:key="frame_setting"
+        android:title="@string/frame_setting_title" />
+    <Preference
+        android:key="finger_thickness_setting"
+        android:title="@string/finger_thickness_setting" />
+    <CheckBoxPreference
+        android:key="swip_lock_setting"
+        android:title="@string/swip_lock_setting" android:defaultValue="false"/>
+    <CheckBoxPreference
+        android:key="paint_mode_setting"
+        android:title="@string/paint_mode_setting" android:defaultValue="false"/>
+     <CheckBoxPreference  android:key="batter_save_mode_setting"
+        android:title="@string/batter_save_mode_setting" android:defaultValue="false"/>
+   <CheckBoxPreference 
+            android:key="debug_mode_setting"
+        android:title="@string/debug_mode_setting"
+        android:defaultValue="false"/>
+		<Preference  android:key="gotomarket"
+          android:title="gotomarket"
+          />
+    		<Preference  android:key="savepicture"
+          android:title="savepicture"
+         android:enabled="false" android:selectable="false"/>    
+
+<CheckBoxPreference
+        android:defaultValue="true"
+        android:key="background_setting"
+        android:title="@string/back_ground_onoff" />
+    <ListPreference
+        android:defaultValue="PROXIMITY"
+        android:entries="@array/light_senser"
+        android:entryValues="@array/light_senser_prefix"
+        android:key="light_setting"
+        android:summary="@string/light_summary"
+        android:title="@string/light_setting" android:shouldDisableView="false"/>
+    <ListPreference
+        android:defaultValue="1.0"
+        android:entries="@array/acc_senser"
+        android:entryValues="@array/acc_senser_prefix"
+        android:key="acc_setting"
+        android:summary="@string/acc_summary"
+        android:title="@string/acc_setting" android:shouldDisableView="false"/>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="vib_setting"
+        android:summary="@string/vib_setting_summary"
+        android:title="@string/vib_setting_title" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="sound_setting"
+        android:summary="@string/sound_setting_summary"
+        android:title="@string/sound_setting_title" />
+    <Preference android:shouldDisableView="true"
+         android:key="back_bit_setting"
+        />
+    -->
+    <Preference
+        android:key="include_image_setting"
+        android:title="@string/include_image_setting" />
+
+    <Preference android:key="gotomarket" android:title="@string/gotomarket" /><PreferenceCategory android:enabled="true">
+        
+        <Preference
+            android:enabled="false"
+            android:key="snowgroundcolor"
+            android:title="@string/snow_ground_color_title"
+            android:widgetLayout="@layout/snowgroundcolor_setting" />
+        <Preference
+            android:enabled="false"
+            android:key="snowflakecolor"
+            android:title="@string/snow_flake_color_title"
+            android:widgetLayout="@layout/snowflakecolor_setting" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="false"
+            android:key="flake_touchable_setting"
+            android:title="@string/flake_touchable_title" />
+
+        <Preference
+            android:enabled="false"
+            android:key="finger_thickness_setting"
+            android:title="@string/finger_thickness_setting" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="swip_lock_setting"
+            android:title="@string/swip_lock_setting" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="paint_mode_setting"
+            android:title="@string/paint_mode_setting" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="batter_save_mode_setting"
+            android:title="@string/batter_save_mode_setting" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="debug_mode_setting"
+            android:title="@string/debug_mode_setting" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
