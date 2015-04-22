@@ -64,8 +64,6 @@ public class SnowBoardPrefer extends PreferenceActivity implements
 		// TODO Auto-generated method stub
 		getPreferenceManager().setSharedPreferencesName(
 				SnowBoard.SHARED_PREFS_NAME);
-		// getPreferenceManager().
-
 		addPreferencesFromResource(R.xml.snow_prefer);
 		
 		getPreferenceManager().getSharedPreferences()
@@ -350,7 +348,6 @@ public class SnowBoardPrefer extends PreferenceActivity implements
 		
 		public void onLeaveApplication(Ad arg0) {
 			// TODO Auto-generated method stub
-			//Log.d("TAG", "onLeaveApplication");
 		}
 		
 		public void onFailedToReceiveAd(Ad arg0, ErrorCode arg1) {

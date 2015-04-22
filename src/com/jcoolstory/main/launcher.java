@@ -45,15 +45,8 @@ public class launcher extends Activity{
 		    		
 		    		String str = getPackageName();
 		    		try {
-//						Context context = createPackageContext(str, CONTEXT_INCLUDE_CODE);
-//						WallpaperManager wx = WallpaperManager.getInstance(context);
-//						WallpaperInfo xd= wx.getWallpaperInfo();
-//						String setting = xd.getSettingsActivity();
-//						Intent intent = new Intent();
-//						intent.setClassName(str, setting);
-//						startActivity(intent);
 		    			Intent intent = new Intent(launcher.this,SnowBoardPrefer.class);
-//						intent.setClassName(str, "SnowBoardPrefer.class");
+
 						startActivity(intent);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block

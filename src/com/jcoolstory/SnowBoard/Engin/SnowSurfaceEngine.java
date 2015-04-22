@@ -84,7 +84,6 @@ public class SnowSurfaceEngine extends MyEngine {
 
 	private Paint mDrayPaint;
 
-	// private Matrix snowboardWorld.mDisplayMatrix;
 	public SnowSurfaceEngine(SurfaceHolder holder, Context context, int w, int h) {
 		super(holder, context, w, h);
 		// TODO Auto-generated constructor stub
@@ -100,7 +99,6 @@ public class SnowSurfaceEngine extends MyEngine {
 			cr.rad = mRnd.nextInt(3);
 			cr.velocityX = (mRnd.nextFloat() - 0.5f) * 5f;
 			cr.velocityY = (mRnd.nextFloat()) * ((cr.rad + 1));
-			// cr.velocityY = (mRnd.nextFloat()) * 2f;
 			cr.yRange = Height * 2;
 			mCrystalList.add(cr);
 		}
@@ -114,28 +112,19 @@ public class SnowSurfaceEngine extends MyEngine {
 
 	public void accelerate(int i) {
 		// TODO Auto-generated method stub
-		//down = i * 5f;
-		//myWorld.wind = 4 + mRnd.nextInt(3);
-		//myWorld.wind = mRnd.nextBoolean() ? -myWorld.wind : myWorld.wind;
 
 	}
 
 	public void deaccelerate() {
 
-		//down = down_default;
-		//myWorld.wind = mRnd.nextInt(3) - 1;
-
 	}
 
 	public void deProxi() {
 		// TODO Auto-generated method stub
-		//down = 5;
 	}
 
 	public void doProxi() {
 		// TODO Auto-generated method stub
-
-		// down = down_default;
 	}
 
 	public void doTouchEvent(MotionEvent event) {
@@ -169,8 +158,6 @@ public class SnowSurfaceEngine extends MyEngine {
 
 	public void drawFlake(Canvas canvas) {
 
-//		if (!config.visibleFlakes)
-//			return;
 		if (flakeState == FlakeState.Rain) {
 			canvas.concat(myWorld.DisplayMatrix);
 			float size = mDefaultRound / 5;
@@ -206,10 +193,6 @@ public class SnowSurfaceEngine extends MyEngine {
 	public void present(Canvas canvas) {
 		float deley = 0;
 		long last = System.nanoTime();
-		//
-		//
-		// RectF rect = new RectF(snowboardWorld.mDisplayRect);
-		// snowboardWorld.mDisplayMatrix.mapRect(rect);
 		canvas.clipRect(myWorld.DisplayRect);
 		if (config.mDrawBackgroundEnabled && mBackgroundBitmap != null) // 39
 																		// -//
@@ -286,21 +269,6 @@ public class SnowSurfaceEngine extends MyEngine {
 			editor.commit();
 
 		}
-		// switch (flakeState) {
-		// case Rain:
-		//
-		// break;
-		// case SnowFallFast:
-		//
-		// break;
-		// case Snowstorm:
-		//
-		// break;
-		// case Normal:
-
-		// default:
-		// break;
-		// }
 
 	}
 
@@ -356,14 +324,11 @@ public class SnowSurfaceEngine extends MyEngine {
 		Xfermode xfer = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
 
 		paint.setMaskFilter(maskfilter);
-		// Paint pain1 = new Paint(mBaseBlurPaint);
 		paint.setXfermode(xfer);
-		// pain1.setAlpha(80);
 
 		if (mGroundLayerCanvas != null) {
 
 			mGroundLayerCanvas.drawOval(rectf, paint);
-			// mGroundLayerCanvas.drawOval(rectf, pain1);
 		}
 	}
 
@@ -386,14 +351,12 @@ public class SnowSurfaceEngine extends MyEngine {
 		}
 
 		mDefaultRound = (int) (BASE_RAD * mBaseRatio);
-		// (int) ((BASE_RAD - mRAD) / scale * ratio);
 		config.mFlakeMax *= mBaseRatio;
 		mTouchRadDefault = mDefaultRound / 2;
 		mTouchRAD = mTouchRadDefault;
 		myWorld.init(w, h);
 
 		touchoval = new RectF();
-		// snowboardWorld.mDisplayMatrix = new Matrix();
 
 	}
 
@@ -409,7 +372,6 @@ public class SnowSurfaceEngine extends MyEngine {
 
 			RectF oval = new RectF(0, 0, 3 * size + i * size, 3 * size + i
 					* size);
-			// canvas.drawBitmap(temp, null,oval, null);
 			canvas.drawOval(oval, mPaint);
 			snows[i] = bitmap;
 		}
@@ -493,15 +455,6 @@ public class SnowSurfaceEngine extends MyEngine {
 	public void offset(float xOffset, float yOffset, int xPixelOffset,
 			int yPixelOffset) {
 		// TODO Auto-generated method stub
-		// if (config.swipe && !landscape) {
-		//
-		// myWorld.BackLayerRect.offsetTo((int) (myWorld.BackLayerRect.width() *
-		// xOffset), 0);
-		// // Log.d("TAG", "off : " + snowboardWorld.mBackLayerRect.right *
-		// xOffset);
-		// // mBackRect.offsetTo(-xPixelOffset, yPixelOffset);
-		//
-		// }
 	}
 
 	public void rotate(boolean rotate, float z) {
@@ -516,7 +469,6 @@ public class SnowSurfaceEngine extends MyEngine {
 					myWorld.rotatingStart(MyWorld.ANGLE_ZERO);
 					deaccelerate();
 				}
-				// deProxi();
 				flakeState = FlakeState.Normal;
 			} else if (z > 250) {
 				if (myWorld.RotateDst != MyWorld.ANGLE_RIGHT) {
@@ -544,12 +496,10 @@ public class SnowSurfaceEngine extends MyEngine {
 				myWorld.rotatingStart(MyWorld.ANGLE_ZERO);
 				deaccelerate();
 			}
-			// deProxi();
 			flakeState = FlakeState.Normal;
 		}
 
 		else {
-			// myWorld.RotateDst = World.ANGLE_ZERO;
 		}
 		if (DEBUG)
 			Log.d("TAG", "rotate : " + rotate + "z :" + z);
@@ -561,58 +511,28 @@ public class SnowSurfaceEngine extends MyEngine {
 				config.mDrawBackgroundEnabled = false;
 			} else {
 
-				// if (bitmap.getWidth() > bitmap.getHeight())
-				// config.swipe = true;
-				// else
-				// config.swipe = false;
-
-				Bitmap temp = mBackgroundBitmap;// Bitmap.createBitmap(Width*2,
-												// Height, Config.RGB_565);
-												// mBackgroundBitmap =
-												// Bitmap.createBitmap(Width,
-												// Height, Config.RGB_565);
-				// if (bitmap.hasAlpha())
-				// {
-				//
-				// }
+				Bitmap temp = mBackgroundBitmap;
+	
 				mBackgroundBitmap = bitmap.copy(Config.RGB_565, false);
-				// mBackgroundBitmap = Bitmap.createScaledBitmap(bitmap,
-				// Width, Height, false);
-				// mBackgroundBitmap = bitmap;
-
+	
 				if (bitmap != null)
 					bitmap.recycle();
-				// myWorld.BackLayerRect = new Rect(0, 0, Width/2, Height/2);
-
+	
 				if (temp != null)
 					temp.recycle();
-				// mBaseLayer = mBackgroundBitmap.copy(Config.RGB_565, true);
 				if (mBaseLayer != null)
 					temp.recycle();
 				mBaseLayer = Bitmap.createBitmap(myWorld.BackLayerRect.width(),
 						myWorld.BackLayerRect.height(), Config.ARGB_8888);
-
+	
 				mGroundLayerCanvas = new Canvas(mBaseLayer);
 
-				// mGroundLayerCanvas.concat(snowboardWorld.mDisplayMatrix);
-
 			}
-
-			// mBaseLayer = Bitmap.createBitmap(Width*2, Height,
-			// Config.RGB_565);
-
-			// mBaseLayer.recycle();
-
 		}
 	}
 
 	public void setBackground(boolean back) {
 		// TODO Auto-generated method stub
-		// if (!back && mGroundLayerCanvas != null) {
-		// mGroundLayerCanvas.drawRGB(0, 0, 0);
-		// mBackgroundBitmap.eraseColor(Color.BLACK);
-		// }
-
 		config.mDrawBackgroundEnabled = back;
 
 	}

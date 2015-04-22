@@ -60,7 +60,6 @@ public class ColorDialog extends AlertDialog implements OnSeekBarChangeListener,
 		mPreviewDrawable.setCornerRadius(7);
 		Drawable[] layers = {
 			mPreviewDrawable,
-//			res.getDrawable(R.drawable.color_picker_frame),
 		};
 		preview.setBackgroundDrawable(new LayerDrawable(layers));
 		
@@ -170,14 +169,11 @@ public class ColorDialog extends AlertDialog implements OnSeekBarChangeListener,
 		
 		@Override
 		protected boolean onLevelChange(int level) {
-//			Log.d(TAG, "onLevelChange " + level);
 			if (level < 4000 && mDelta <= 0) {
 				mDelta = 0.05f;
-//				Log.d(TAG, "onLevelChange scheduleSelf ++");
 				scheduleSelf(this, SystemClock.uptimeMillis() + DELAY);
 			} else
 			if (level > 6000 && mDelta >= 0) {
-//				Log.d(TAG, "onLevelChange scheduleSelf --");
 				mDelta = -0.05f;
 				scheduleSelf(this, SystemClock.uptimeMillis() + DELAY);
 			}
@@ -219,7 +215,6 @@ public class ColorDialog extends AlertDialog implements OnSeekBarChangeListener,
 				scheduleSelf(this, SystemClock.uptimeMillis() + DELAY);
 			}
 			invalidateSelf();
-//			Log.d(TAG, "run " + mTextX + " " + SystemClock.uptimeMillis());
 		}
 
 		@Override

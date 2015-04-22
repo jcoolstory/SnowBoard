@@ -104,7 +104,6 @@ public class MyWorld  extends World
 	public void viewanglestep()
 	{
 		if (mRotating) {
-//			mRotating = true;
 			float gap = RotateDst - angle;
 			if (Math.abs(gap) < 5f) {
 				angle = RotateDst;
@@ -112,12 +111,10 @@ public class MyWorld  extends World
 				
 			} else {
 				gap = gap / 7.0f;
-				// gap = Math.max(1, gap);
 				angle += gap;
 			}
-						DisplayMatrix.setRotate(angle, centerX, centerY);
+			DisplayMatrix.setRotate(angle, centerX, centerY);
 			
-
 			float angleratio = angle / 90;
 			float sizeraito = Height /  Width;
 			sizeraito = 1 + (sizeraito - 1f) * Math.abs(angleratio);
