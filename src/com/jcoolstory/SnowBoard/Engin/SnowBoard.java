@@ -122,7 +122,6 @@ public class SnowBoard extends WallpaperService {
 		public void onSurfaceCreated(SurfaceHolder holder) {
 			// TODO Auto-generated method stub
 			super.onSurfaceCreated(holder);
-//			Log.d("TAG", "onSurfaceCreated");
 			shared.onSharedPreferenceChanged(mPrefs, null);
 			myThread.resumePainting();
 		}
@@ -131,7 +130,6 @@ public class SnowBoard extends WallpaperService {
 		public void onSurfaceDestroyed(SurfaceHolder holder) {
 			// TODO Auto-generated method stub
 			super.onSurfaceDestroyed(holder);
-			// Log.d("TAG", "onSurfaceDestroyed" );
 			unSaredPreference();
 			myThread.stopPainting();
 		}
@@ -140,21 +138,16 @@ public class SnowBoard extends WallpaperService {
 		public void onVisibilityChanged(boolean visible) {
 			// TODO Auto-generated method stub
 			super.onVisibilityChanged(visible);
-	//		Log.d("TAG", "onVisibilityChanged");
 			
 			myThread.rotate(true, 350);
 			if (visible) {
 				myThread.resumePainting();
-				// registerSensor();
 				mVisible = true;
-				// setTouchEventsEnabled(mVisible);
 				orienListener.enable();
 			} else {
 
 				myThread.pausePainting();
-				// unregisterSensor();
 				mVisible = false;
-				// setTouchEventsEnabled(mVisible);
 				orienListener.disable();
 			}
 			
@@ -301,7 +294,6 @@ public class SnowBoard extends WallpaperService {
 					myThread.setWind(3,index);
 				
 				}
-			//	myThread.resumePainting();
 			}
 		};
 		public void setDefaultBackground()
@@ -315,22 +307,18 @@ public class SnowBoard extends WallpaperService {
 		}
 		public void setBackground(String key,String index)
 		{
-			
-	//		Log.d("TAG", "SetBitmap" );
 			try {
 
 				if ("0".equals(index)) {
 	
 					File toFile = getBaseContext().getCacheDir();
 					Bitmap bitmap;
-//					Log.d("TAG", "X:" + toFile							+ "Y:" + toFile.toString());
 					try {
 						toFile = new File(toFile.getAbsolutePath()
 								+ "/" + SnowBoard.CAHCE_FILE_NAME);						
 				
 							bitmap = BitmapFactory.decodeFile(toFile
 									.toString());
-//							Log.d("Snow", "X:" + bitmap.getWidth()	+ "Y:" + bitmap.getHeight());
 							
 							myThread.setBackbround(bitmap);						
 

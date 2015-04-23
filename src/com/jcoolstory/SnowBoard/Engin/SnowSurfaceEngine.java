@@ -538,117 +538,16 @@ public class SnowSurfaceEngine extends MyEngine {
 	}
 
 	public void setFlakeSize(int size) {
-		// int size = 1;
 		snows = new Bitmap[3];
 		Paint paint = new Paint();
-		// Xfermode xp = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
-		// paint.setXfermode(xp);
 		paint.setColor(mFlakeColor);
 
 		mFlakeSize = size * 6;
-		// config.mFlakeMax = 125 - size * 5;
 		mGroundRate = 0.1f + (size / 20f);
 
-		// synchronized (mList) {
-		// // mList.clear();
-		// // for (int i = 0; i < config.mFlakeMax; i++) {
-		// // Crystal cr = new Crystal();
-		// // cr.x = mRnd.nextInt(Width);
-		// // cr.y = mRnd.nextInt(Height);
-		// // cr.rad = mRnd.nextInt(3);
-		// // cr.velocityX = (mRnd.nextFloat() - 0.5f) * 3f;
-		// // cr.velocityY = (mRnd.nextFloat()) * 1f;
-		// // cr.rotate = mRnd.nextInt(360);
-		// // mList.add(cr);
-		// // }
-		// }
-
-		// int i = 1;
-		// for (int i = 0 ; i < 3 ; i++)
-		// {
-		// Bitmap temp = null;
-		// Canvas canvas = null;
-		// RectF oval = null;
-		// if (size > 4) {
-		// temp =
-		// BitmapFactory.decodeResource(mContext.getResources(),R.drawable.base_snow1);
-		// Bitmap bitmap = Bitmap.createBitmap(mFlakeSize / 3, mFlakeSize / 3,
-		// Config.ARGB_8888);
-		// canvas = new Canvas(bitmap);
-		//
-		// oval = new RectF(0, 0, mFlakeSize / 3, mFlakeSize / 3);
-		// canvas.drawBitmap(temp, null, oval, mFlakePaint);
-		// // canvas.drawOval(oval, paint);
-		// snows[0] = bitmap;
-		// temp.recycle();
-		// } else {
-		// // temp = BitmapFactory.decodeResource(mContext.getResources(),
-		// // R.drawable.base_snow5);
-		// Bitmap bitmap = Bitmap.createBitmap(mFlakeSize / 2, mFlakeSize / 2,
-		// Config.ARGB_8888);
-		// canvas = new Canvas(bitmap);
-		//
-		// oval = new RectF(0, 0, mFlakeSize / 2, mFlakeSize / 2);
-		// // canvas.drawBitmap(temp, null,oval, null);
-		// canvas.drawOval(oval, mFlakePaint);
-		// snows[0] = bitmap;
-		// }
-		// if (size > 4) {
-		// temp = BitmapFactory.decodeResource(mContext.getResources(),
-		// R.drawable.snowflake03);
-		// Bitmap bitmap1 = Bitmap.createBitmap((int) (mFlakeSize * 3 /
-		// 4.0),(int) (mFlakeSize * 3 / 4.0), Config.ARGB_8888);
-		// canvas = new Canvas(bitmap1);
-		//
-		// oval = new RectF(0, 0, (int) (mFlakeSize * 3 / 4.0),
-		// (int) (mFlakeSize * 3 / 4.0));
-		// canvas.drawBitmap(temp, null, oval, mFlakePaint);
-		// // canvas.drawOval(oval, paint);
-		// snows[1] = bitmap1;
-		// temp.recycle();
-		// } else {
-		// Bitmap bitmap1 = Bitmap.createBitmap((int) (mFlakeSize * 3 /
-		// 4.0),(int) (mFlakeSize * 3 / 4.0), Config.ARGB_8888);
-		// canvas = new Canvas(bitmap1);
-		//
-		// oval = new RectF(0, 0, (int) (mFlakeSize * 3 / 4.0),
-		// (int) (mFlakeSize * 3 / 4.0));
-		// // canvas.drawBitmap(temp, null,oval, null);
-		// canvas.drawOval(oval, mFlakePaint);
-		// snows[1] = bitmap1;
-		// }
-		//
-		// if (size > 4) {
-		// temp = BitmapFactory.decodeResource(mContext.getResources(),
-		// R.drawable.snowflake02);
-		//
-		// Bitmap bitmap2 = Bitmap.createBitmap(mFlakeSize, mFlakeSize,
-		// Config.ARGB_8888);
-		// canvas = new Canvas(bitmap2);
-		//
-		// oval = new RectF(0, 0, mFlakeSize, mFlakeSize);
-		// canvas.drawBitmap(temp, null, oval, mFlakePaint);
-		// // canvas.drawOval(oval, paint);
-		// snows[2] = bitmap2;
-		// temp.recycle();
-		// } else {
-		//
-		// Bitmap bitmap2 = Bitmap.createBitmap(mFlakeSize, mFlakeSize,
-		// Config.ARGB_8888);
-		// canvas = new Canvas(bitmap2);
-		//
-		// oval = new RectF(0, 0, mFlakeSize, mFlakeSize);
-		// // canvas.drawBitmap(temp, null,oval, null);
-		// canvas.drawOval(oval, mFlakePaint);
-		// snows[2] = bitmap2;
-		// }
-
-		// Bitmap temp = null;
 		Canvas canvas = null;
 		RectF oval = null;
 		if (size > 4) {
-			// temp =
-			// BitmapFactory.decodeResource(mContext.getResources(),R.drawable.base_snow1);
 			Bitmap bitmap = Bitmap.createBitmap(mFlakeSize / 3, mFlakeSize / 3,
 					Config.ARGB_8888);
 			canvas = new Canvas(bitmap);
@@ -656,24 +555,17 @@ public class SnowSurfaceEngine extends MyEngine {
 			oval = new RectF(0, 0, mFlakeSize / 3, mFlakeSize / 3);
 			canvas.drawBitmap(mFlakesBitmap, mFlakeRegions[0], oval,
 					mFlakePaint);
-			// canvas.drawOval(oval, paint);
 			snows[0] = bitmap;
-			// temp.recycle();
 		} else {
-			// temp = BitmapFactory.decodeResource(mContext.getResources(),
-			// R.drawable.base_snow5);
 			Bitmap bitmap = Bitmap.createBitmap(mFlakeSize / 2, mFlakeSize / 2,
 					Config.ARGB_8888);
 			canvas = new Canvas(bitmap);
 
 			oval = new RectF(0, 0, mFlakeSize / 2, mFlakeSize / 2);
-			// canvas.drawBitmap(temp, null,oval, null);
 			canvas.drawOval(oval, mFlakePaint);
 			snows[0] = bitmap;
 		}
 		if (size > 3) {
-			// temp =
-			// BitmapFactory.decodeResource(mContext.getResources(),R.drawable.snowflake03);
 			Bitmap bitmap1 = Bitmap.createBitmap((int) (mFlakeSize * 3 / 4.0),
 					(int) (mFlakeSize * 3 / 4.0), Config.ARGB_8888);
 			canvas = new Canvas(bitmap1);
@@ -682,9 +574,7 @@ public class SnowSurfaceEngine extends MyEngine {
 					(int) (mFlakeSize * 3 / 4.0));
 			canvas.drawBitmap(mFlakesBitmap, mFlakeRegions[1], oval,
 					mFlakePaint);
-			// canvas.drawOval(oval, paint);
 			snows[1] = bitmap1;
-			// temp.recycle();
 		} else {
 			Bitmap bitmap1 = Bitmap.createBitmap((int) (mFlakeSize * 3 / 4.0),
 					(int) (mFlakeSize * 3 / 4.0), Config.ARGB_8888);
@@ -692,15 +582,11 @@ public class SnowSurfaceEngine extends MyEngine {
 
 			oval = new RectF(0, 0, (int) (mFlakeSize * 3 / 4.0),
 					(int) (mFlakeSize * 3 / 4.0));
-			// canvas.drawBitmap(temp, null,oval, null);
 			canvas.drawOval(oval, mFlakePaint);
 			snows[1] = bitmap1;
 		}
 
 		if (size > 2) {
-			// temp =
-			// BitmapFactory.decodeResource(mContext.getResources(),R.drawable.snowflake02);
-
 			Bitmap bitmap2 = Bitmap.createBitmap(mFlakeSize, mFlakeSize,
 					Config.ARGB_8888);
 			canvas = new Canvas(bitmap2);
@@ -708,9 +594,7 @@ public class SnowSurfaceEngine extends MyEngine {
 			oval = new RectF(0, 0, mFlakeSize, mFlakeSize);
 			canvas.drawBitmap(mFlakesBitmap, mFlakeRegions[3], oval,
 					mFlakePaint);
-			// canvas.drawOval(oval, paint);
 			snows[2] = bitmap2;
-			// temp.recycle();
 		} else {
 
 			Bitmap bitmap2 = Bitmap.createBitmap(mFlakeSize, mFlakeSize,
@@ -718,11 +602,9 @@ public class SnowSurfaceEngine extends MyEngine {
 			canvas = new Canvas(bitmap2);
 
 			oval = new RectF(0, 0, mFlakeSize, mFlakeSize);
-			// canvas.drawBitmap(temp, null,oval, null);
 			canvas.drawOval(oval, mFlakePaint);
 			snows[2] = bitmap2;
 		}
-		// }
 		setSnowFlakeColor(mFlakeColor);
 	}
 
@@ -811,8 +693,6 @@ public class SnowSurfaceEngine extends MyEngine {
 			eraseRound();
 
 		mTouchList.clear();
-		// if ( mRnd.nextInt(5) < 2)
-		// mGroundLayerCanvas.drawPaint( mDrayPaint);
 	}
 
 	public void StandardStep() {
@@ -900,20 +780,16 @@ public class SnowSurfaceEngine extends MyEngine {
 	public void createeffect(Crystal cr) {
 		if (cr.y > cr.yRange) {
 
-			// if (Math.random() < 0.5)
-			{
-				// if (Math.random() < 0.5)
-				if (cr.rad == 2 && mRnd.nextBoolean()) {
-					SnowEffect se = new SnowEffect();
-					se.durtaion = 20f;
-					se.x = cr.x;
-					se.y = cr.y;
-					if (effectList.size() > 20)
-						effectList.remove(0);
-					effectList.add(se);
-				}
-
+			if (cr.rad == 2 && mRnd.nextBoolean()) {
+				SnowEffect se = new SnowEffect();
+				se.durtaion = 20f;
+				se.x = cr.x;
+				se.y = cr.y;
+				if (effectList.size() > 20)
+					effectList.remove(0);
+				effectList.add(se);
 			}
+
 			cr.y = Height;
 		}
 	}
@@ -944,7 +820,6 @@ public class SnowSurfaceEngine extends MyEngine {
 			}
 		}
 		if (myWorld.RotateDst == MyWorld.ANGLE_RIGHT) {
-			// for (int i = 0; i < 1; i++)
 			drawDestSnow();
 		} else if (myWorld.RotateDst == MyWorld.ANGLE_LEFT) {
 			SnowEffect se = new SnowEffect();
@@ -977,23 +852,17 @@ public class SnowSurfaceEngine extends MyEngine {
 			}
 
 		}
-		// synchronized (mGroundLayerCanvas) {
 		if (config.mFlakeTouch) {
-			// mat.setScale(16f, 16f, rectf.centerX(), rectf.centerY());
 
 			if (myWorld.isRotating()) {
-				// mat.reset();
 				Matrix mat = new Matrix();
 				mat.setRotate(-myWorld.angle, myWorld.BaseRectF.centerX(),
 						myWorld.BaseRectF.centerY());
 				mat.mapRect(rectf);
 			}
-			// Log.d("Snow", rectf.toString());
 			mTouchList.add(rectf);
 
 		}
-		// }
-
 	}
 
 	@Override
@@ -1025,7 +894,6 @@ public class SnowSurfaceEngine extends MyEngine {
 		int currentFrame;
 		int currentTime = 0;
 
-		// Rect[][] rect = new Rect[3][4];
 		public SnowEffect() {
 
 		}
@@ -1102,47 +970,7 @@ public class SnowSurfaceEngine extends MyEngine {
 					if (Math.abs(velocityX) > 500
 							&& myWorld.RotateDst == MyWorld.ANGLE_ZERO) {
 						myWorld.VelocityX = 50 * (velocityX < 0.0f ? -1 : 1);
-						// if (!config.selfswipe)
-						// {
-						// int to1 = 0;
-						// if (velocityX <0.0f)
-						// {
-						// to1 =0;
-						// }
-						// else
-						// {
-						// to1 = snowboardWorld.mBackLayerRect.width();
-						// }
-						//
-						// final int to =to1;
-						// final int range = to -
-						// snowboardWorld.mBackLayerRect.left;
-						// Thread th = new Thread(new Runnable() {
-						//
-						// public void run() {
-						// // TODO Auto-generated method stub
-						// long start = System.currentTimeMillis();
-						// long curreunt = start;
-						// long end = start + 1000;
-						// while(end > curreunt)
-						// {
-						// long gap = end - curreunt;
-						// float ratio = gap / 1000.0f;
-						// snowboardWorld.mBackLayerRect.offset( (int)
-						// (range*ratio), 0);
-						// Log.d("TAG",snowboardWorld.mBackLayerRect.toString());
-						// try {
-						// Thread.sleep(200);
-						// } catch (InterruptedException e) {
-						// // TODO Auto-generated catch block
-						// e.printStackTrace();
-						// }
-						// curreunt = System.currentTimeMillis();
-						// }
-						// }
-						// });
-						// th.start();
-						// }
+						
 					}
 					return false;
 				}
@@ -1199,9 +1027,6 @@ public class SnowSurfaceEngine extends MyEngine {
 
 	private int mDefaultRound = 0;
 
-	// private int mLQW = 0;
-	//
-	// private int mLQH = 0;
 
 	private int scale = 1;
 
@@ -1213,11 +1038,9 @@ public class SnowSurfaceEngine extends MyEngine {
 	private ArrayList<SnowEffect> effectList = new ArrayList<SnowEffect>();
 	private ArrayList<SnowEffect> rainList = new ArrayList<SnowEffect>();
 
-	// private int down_half = -1;
 
 	private Random mRnd;
 
-	// private int mOrientZ = 0;
 	private int mTouchRAD;
 
 	private RectF touchoval;
@@ -1264,18 +1087,14 @@ public class SnowSurfaceEngine extends MyEngine {
 		// TODO Auto-generated method stub
 		myWorld.BackLayerRect.right = width;
 		myWorld.BackLayerRect.left = 0;
-		// config.swipe = false;
 		myWorld.BackLayerRect.bottom = height;
 		myWorld.DisplayRect.right = width;
 
 		myWorld.DisplayRect.bottom = height;
 		if (width > height) {
-			// lastswipe = config.swipe;
-			// config.swipe = false;
 			landscape = true;
 		} else {
 			landscape = false;
-			// config.swipe = lastswipe;
 		}
 
 	}

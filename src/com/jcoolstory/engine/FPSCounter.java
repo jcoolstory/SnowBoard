@@ -9,11 +9,9 @@ public class FPSCounter {
     public boolean logFrame() {
         frames++;
         if(System.nanoTime() - startTime >= 1000000000) {
-         //   Log.d("FPSCounter", "fps: " + frames);
             lastframe = frames;
             frames = 0;
             startTime = System.nanoTime();
-            
             
             return true;
         }
